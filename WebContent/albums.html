@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>单向社交</title>
+<link href="./stylesheets/album.css" rel="stylesheet" type="text/css" />
+<script src="./javascripts/jquery-1.7.min.js" type="text/javascript"></script>
+<script src="./javascripts/album.js" type="text/javascript"></script>
+<script src="./javascripts/isFF.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+<ul>
+<li><a href="home.html">首页</a></li>
+<li class="home"><a href="albums.html">相册</a></li>
+</ul>
+<ul class="user"></ul>
+</div>
+<div id="main">
+	<div class="main_top">
+		<div class="title fl">邓志豪的相册</div>
+		<a class="green_btn create_album fr" id="creator">创建相册</a>
+	</div>
+	<div class="splitter"></div>
+	<div class="main_center">
+		<div class="info fr">共<span class="album_count">5</span>个相册，<span class="photo_count">23</span>张照片</div>
+		<div class="clear"></div>
+		<ul class="albums">
+			<li class="album_1">
+				<a href="album.html" title="头像相册"><img src="./images/photo.jpg" alt="头像相册" /></a>
+				<div class="album_name"><a href="album.html">头像相册</a></div>
+				<div class="album_info"><span class="photo_count">2</span>张照片 <span class="update_date">2011-9-18</span>更新</div>
+			</li>
+			<li class="album_2">
+				<a href="album.html" title="头像相册头像相册头像aaaaaaaabbbbbbbbbbbccccc"><img src="./images/photo.jpg" alt="头像相册" /></a>
+				<div class="album_name text_overflow"><a href="album.html">头像相册头像相册头像aaaaaaaabbbbbbbbbccc</a></div>
+				<div class="album_info"><span class="photo_count">2</span>张照片 <span class="update_date">2011-9-18</span>更新</div>
+			</li>
+			<li class="album_3">
+				<a href="album.html" title="头像相册"><img src="./images/photo.jpg" alt="头像相册" /></a>
+				<div class="album_name"><a href="album.html">头像相册</a></div>
+				<div class="album_info"><span class="photo_count">2</span>张照片 <span class="update_date">2011-9-18</span>更新</div>
+			</li>
+			<li class="album_4">
+				<a href="album.html" title="头像相册"><img src="./images/photo.jpg" alt="头像相册" /></a>
+				<div class="album_name"><a href="album.html">头像相册</a></div>
+				<div class="album_info"><span class="photo_count">2</span>张照片 <span class="update_date">2011-9-18</span>更新</div>
+			</li>
+			<li class="album_5">
+				<a href="album.html" title="头像相册"><img src="./images/photo.jpg" alt="头像相册" /></a>
+				<div class="album_name"><a href="album.html">头像相册</a></div>
+				<div class="album_info"><span class="photo_count">2</span>张照片 <span class="update_date">2011-9-18</span>更新</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+<div id="pop_up_bg"></div>
+<div id="pop_up">
+	<div class="pop_up_container">
+		<div class="pop_up_title">创建相册<span class="fr" id="close_popup">X</span></div>
+		<div class="create_main">
+			<div class="subtitle fl">相册名称：</div>
+			<input type="" name="" value="" class="album_name fl" id="word_counter"/>
+			<div class="wordcount fl"><span id="words">0</span>/15</div>
+			<div class="clear"></div>
+			<div id="error">占位不是你的错</div>
+			<a class="orange_btn create fl" id="create_btn">创建</a>
+			<a class="green_btn cancel fl" id="cancel_btn">取消</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(
+	$('#creator').click(function(){
+		openPopup();
+	}),
+	$('#cancel_btn').click(function() {
+		closePopup(); 
+	}),
+	$('#close_popup').click(function() {
+		closePopup();
+	}), 
+	$('#create_btn').click(function() {
+		alert('creating...');
+		closePopup();
+	}),
+	$('#word_counter').click(function() {
+		countWords('15');
+	})
+)
+
+</script>
+</body>
+</html>

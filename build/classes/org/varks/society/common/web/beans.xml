@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<description>公用web包总控</description>
+	
+	<!-- 编辑器包的bean内容 -->
+	<import resource="classpath:org/varks/society/common/web/edit/beans.xml"/>
+	
+	<!-- 资源包的内容 -->
+	<import resource="classpath:org/varks/society/common/web/resources/springframework/local/beans.xml"/>
+</beans>

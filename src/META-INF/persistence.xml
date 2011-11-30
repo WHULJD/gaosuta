@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<!-- xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence.xsd 
+		" -->
+	<persistence-unit name="OpenJPA" transaction-type="RESOURCE_LOCAL">
+		<description>OpenJPA persistence配置文件</description>
+
+		<!-- PersistenceProvider -->
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl
+		</provider>
+
+		<class>org.varks.society.local.entities.User</class>
+		<class>org.varks.society.local.entities.Record</class>
+		<class>org.varks.society.local.entities.Photo</class>
+		<class>org.varks.society.local.entities.PhotoAlbum</class>
+
+		<!-- Properties -->
+		<properties>
+			<property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/local" />
+			<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver" />
+			<property name="openjpa.ConnectionUserName" value="root" />
+			<property name="openjpa.ConnectionPassword" value="" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="Hibernate" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>org.varks.society.local.entities.User</class>
+		<class>org.varks.society.local.entities.Record</class>
+		<class>org.varks.society.local.entities.Photo</class>
+		<class>org.varks.society.local.entities.PhotoAlbum</class>
+
+		<properties>
+			<property name="hibernate.connection.driver_class"
+				value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/local"></property>
+			<property name="hibernate.connection.username" value="root"></property>
+			<property name="hibernate.connection.password" value=""></property>
+			<property name="hibernate.show_sql" value="true"></property>
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect."></property> -->
+			<property name="hibernate.current_session_context_class"
+				value="thread"></property>
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,25 @@
+﻿  input[type="text"]{margin-left:10px; width:360px; height:30px; border:#999 solid 1px; -webkit-border-radius:5px;}
+  input[type="password"]{margin-left:10px; width:360px; height:30px; border:#999 solid 1px; -webkit-border-radius:5px;}
+  #left_top h2{font-size:30px; color:#333333;}
+  ul{ margin-top:18px; padding:0;}
+  ul li{ list-style-type:none; padding-bottom:30px; margin-left:50px;}
+  ul li span{font-size:14px;  text-decoration:none; color:#999;}
+  ul li.required{margin-left:10px; width:360px; height:30px; border:#999 solid 1px; -webkit-border-radius:5px;}
+  #right h5{ font-size:14px; color:#333333; margin-top:100px; margin-left:40px;}
+  #right h5 a{font-size:14px; color:#e77817; text-decoration:none;}
+  #right h5 a:hover{font-size:14px; color:#e77817; text-decoration:underline;}
+  #left .login_btn{ margin-left:90px; width:65px; height:31px;background-color:#00af3f; border:#999 solid 1px; -webkit-border-radius:5px;}
+  #left .login_btn:hover{ margin-left:90px; width:65px; height:31px;background-color:#79C471; border:#999 solid 1px; -webkit-border-radius:5px;}
+  #left .register_btn{ margin-left:90px; width:65px; height:31px;background-color:#00af3f; border:#999 solid 1px; -webkit-border-radius:5px;}
+  #left .register_btn:hover{ margin-left:90px; width:65px; height:31px;background-color:#79C471; border:#999 solid 1px; -webkit-border-radius:5px;}
+  .high{color:red;}
+  .onError{
+	  background:#FFE0E9 url(../img/reg3.gif) no-repeat 0 center;
+	  padding-left:25px;
+  }
+  .onSuccess{
+	  background:#E9FBEB url(../img/reg4.gif) no-repeat 0 center;
+	  padding-left:25px;
+  }
+  span.formtips{font-size:12px;text-decoration:none; color:#999;}
+  .formtips{width: 200px;margin:2px;padding:2px;}

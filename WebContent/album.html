@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>单向社交</title>
+<link href="./stylesheets/album.css" rel="stylesheet" type="text/css" />
+<script src="./javascripts/jquery-1.7.min.js" type="text/javascript"></script>
+<script src="./javascripts/album.js" type="text/javascript"></script>
+<script src="./javascripts/isFF.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header">
+<ul>
+<li><a href="home.html">首页</a></li>
+<li class="home"><a href="albums.html">相册</a></li>
+</ul>
+<ul class="user"></ul>
+</div>
+<div id="main">
+	<div class="main_top">
+		<div class="title fl">默认相册</div>
+		<a class="return_to_album fr" href="albums.html">>返回相册首页</a>
+		<a class="green_btn upload fr" id="uploader">上传图片</a>
+	</div>
+	<div class="splitter"></div>
+	<div class="main_center">
+		<div class="info fr"><span class="photo_count">23</span>张照片</div>
+		<div class="clear"></div>
+		<ul class="photos">
+			<li class="photo_1">
+				<a href="photo.html" title="写了个Vvvvvvvvvvvvvvvvvaaaaaaaaaaaaaaaaaaaaa"><img src="./images/photo.jpg" alt="写了个Vvvvvvvvvvvvvvvvvaaaaaaaaaaaaaaaaaaaaa" /></a>
+				<div class="photo_desc">写了个Vvvvvvvvvvvvvvvvvaaaaaaaaaaaaaaaaaaaaa</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<li class="photo_1">
+				<a href="photo.html" title="写了个V"><img src="./images/photo.jpg" alt="写了个V" /></a>
+				<div class="photo_desc">写了个V</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+<div id="pop_up_bg"></div>
+<div id="pop_up">
+	<div class="pop_up_container">
+		<div class="pop_up_title">上传图片<span class="fr" id="close_popup">X</span></div>
+		<div class="upload_main">
+			<div class="tip">你可以上传JPG、GIF、PNG或BMP文件，每个文件大小可以到3M</div>
+			<input type="file" name="" value="" class="orange_btn choose_file fl" id="choose_btn"/>
+			<a class="green_btn upload fl" id="upload_btn">开始上传</a>
+			<div class="clear"></div>
+			<div class="subtitle fl">图片说明：</div>
+			<textarea class="desc fl" id="word_counter"></textarea>
+			<div class="wordcount fl"><span id="words">0</span>/140</div>
+			<div id="error" class="upload_error">哎呀，槽吐满了~</div>
+			<div class="clear"></div>
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(
+	$('#uploader').click(function(){
+		openPopup();
+	}),
+	$('#close_popup').click(function () {
+		closePopup()
+	}),
+	$('#word_counter').click(function() {
+		countWords('140');
+	}),
+	$('#upload_btn').click(function() {
+		alert('uploading...');
+		closePopup()
+	})
+)
+</script>
+</body>
+</html>

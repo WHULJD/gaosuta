@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<description>关于DAO的bean定义</description>
+
+	<bean id="jpaTemplate" factory-bean="jpaTemplateFactory" factory-method="getInatance">
+		<description>返回JpaTemplate</description>
+	</bean>
+	
+	<bean id="jpaTemplateFactory" class="org.varks.society.local.dao.JpaTemplateFactory" scope="singleton">
+		<description>JpaTemplate生成工厂</description>
+	</bean>
+	
+	<bean id="userDAO" class="org.varks.society.local.dao.impl.UserDAOJpaImpl" scope="singleton">
+		<description>UserDAO的实现</description>
+		<property name="template" ref="jpaTemplate"></property>
+	</bean>
+	
+	<bean id="recordDAO" class="org.varks.society.local.dao.impl.RecordDAOJpaImpl" scope="singleton">
+		<description>RecrodDAO(日志)的实现</description>
+		<property name="template" ref="jpaTemplate" />
+	</bean>
+	
+	<bean id="photoDAO" class="org.varks.society.local.dao.impl.PhotoDAOJpaImpl" scope="singleton">
+		<description>PhotoDAO(照片)的实现</description>
+		<property name="template" ref="jpaTemplate"></property>
+	</bean>
+	
+	<bean id="photoAlbumDAO" class="org.varks.society.local.dao.impl.PhotoAlbumJpaImpl" scope="singleton">
+		<description>PhotoAlbumDAO(相册)的实现</description>
+		<property name="template" ref="jpaTemplate"></property>
+	</bean>
+</beans>

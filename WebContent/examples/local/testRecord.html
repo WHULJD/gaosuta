@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="record/find.do">
+		<label>测试查看日志</label>
+		<input type="text" name="id" />
+		<input type="submit" />
+	</form>
+	
+	<form action="record/findByUserId.do">
+		<label>获取某用户的所有日志</label>
+		<input type="text" name="userId" />
+		<input type="text" name="pageNum" />
+		<input type="text" name="pageCapacity" />
+		<input type="submit" />
+	</form>
+	
+	<form action="record/findSelf.do" >
+		<label>查看存储在服务器session用户的日志集合</label>
+		<input type="text" name="pageNum" />
+		<input type="text" name="pageCapacity" />
+		<input type="submit" />
+	</form>
+	
+	<form action="record/insert.do">
+		<label>插入日志</label>
+		<input type="text" name="title" />
+		<textarea name="content" cols="50" rows="25"></textarea>
+		Image: <input type="text" name="urls" />
+		<input type="submit" />
+	</form>
+	
+	<form action="record/delete.do" >
+		<label>删除日志</label>
+		<input type="text" name="id" />
+		<input type="submit" />
+	</form>
+</body>
+</html>
