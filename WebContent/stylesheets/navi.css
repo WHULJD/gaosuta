@@ -1,0 +1,66 @@
+
+/* for navi by XiaoHao */
+#nav_wrapper {
+	width: 900px;
+	margin:0 auto;
+	position: relative;
+}
+
+#header {
+	height: 35px;
+	width: 100%;
+	position:absolute;
+	background: url("../images/nav/nav_bg.png") repeat-x;
+	z-index: -1;
+}
+
+#nav {
+	margin-left: 194px;
+}
+#nav, #nav ul{
+	float: left;
+	list-style-type: none;
+	font-family: "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
+	font-size: 14px;
+}
+#nav li {
+	float: left;
+	height: 35px;
+	display: inline;
+	line-height: 35px;
+	width: 100px;
+	text-align:center;
+	background:url("../images/nav/nav_bg.png") repeat-x;
+}
+#nav li:hover a{
+	background: url("../images/nav/nav_bg_hover.png") repeat-x;
+}
+#nav a{
+	display:block;
+	text-decoration: none;
+	color: #F8F8F8;
+}
+
+#nav #drop-li{
+	width: 130px;
+	text-align:center;
+	position: absolute;
+	right:0;
+}
+#nav #drop-li li {
+	background: #333;
+	width: 130px;
+}
+#nav #drop-li span{
+	display:block;
+	padding-left: 2px;
+	background:url("../images/nav/avatar-mini.png") no-repeat 5px center; 	
+}
+#nav #drop-li span span { background: url("../images/nav/list-arrow.png") no-repeat right center; }
+#nav #setting a { background: url("../images/nav/settings.png") no-repeat 10px center; }
+#nav #logout a  { background: url("../images/nav/logout.png") no-repeat 12px center; }
+#nav #drop-li li:hover {	background: #000; }
+#nav ul  			{ visibility: hidden; }
+#nav li:hover ul	 	{ visibility: visible;}
+
+/* end by Xiaohao */
